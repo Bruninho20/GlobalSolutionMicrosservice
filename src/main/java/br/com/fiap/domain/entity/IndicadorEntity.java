@@ -1,9 +1,9 @@
 package br.com.fiap.domain.entity;
 
-import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,7 +18,7 @@ import lombok.ToString;
 @ToString
 @Entity(name = "indicador")
 @Table(name = "indicador")
-public class Indicador {
+public class IndicadorEntity {
 
 	@Id
 	@Column(name = "indicadorKey")

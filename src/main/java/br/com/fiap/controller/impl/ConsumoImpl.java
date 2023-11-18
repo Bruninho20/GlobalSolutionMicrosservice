@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fiap.controller.ConsumoController;
+import br.com.fiap.domain.entity.ConsumoEntity;
 import br.com.fiap.domain.model.Consumo;
 import br.com.fiap.domain.service.ConsumoService;
 
@@ -18,7 +19,7 @@ public class ConsumoImpl implements ConsumoController {
 	ConsumoService consumoService;
 
 	@Override
-	public List<Consumo> getConsumo() {
+	public List<ConsumoEntity> getConsumo() {
 		return consumoService.getConsumo();
 	}
 

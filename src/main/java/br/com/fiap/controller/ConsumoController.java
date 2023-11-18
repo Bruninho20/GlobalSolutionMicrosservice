@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.fiap.domain.entity.ConsumoEntity;
 import br.com.fiap.domain.model.Consumo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -22,8 +23,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 @RequestMapping("/consumo")
 public interface ConsumoController {
 
-	@Operation(summary = "Consumo API - Microsserviço.", description = "Retorno dos dados da tabela consumo", tags = {
-			"Estoque API" })
+	@Operation(summary = "ODS API - Microsserviço.", description = "Retorno dos dados da tabela consumo", tags = {
+			"ODS API" })
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Successful operation", content = @Content(schema = @Schema(implementation = ResponseEntity.class))),
 			@ApiResponse(responseCode = "400", description = "Invalid Login Data supplied", content = @Content),
@@ -32,6 +33,6 @@ public interface ConsumoController {
 			@ApiResponse(responseCode = "404", description = "Login or Password not found", content = @Content) })
 	@GetMapping(value = "/", consumes = "multipart/form-data")
 	@ResponseStatus(HttpStatus.OK)
-	public List<Consumo> getConsumo();
+	public List<ConsumoEntity> getConsumo();
 
 }
