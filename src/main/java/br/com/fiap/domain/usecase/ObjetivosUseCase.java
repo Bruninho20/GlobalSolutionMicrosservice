@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 
 import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
 
-public interface ConsumoUseCase {
+public interface ObjetivosUseCase {
 
 	public ResponseEntity<ObjetivosGeraisResponse> getConsumo();
 

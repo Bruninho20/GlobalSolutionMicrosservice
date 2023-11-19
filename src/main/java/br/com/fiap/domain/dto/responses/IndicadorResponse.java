@@ -2,10 +2,10 @@ package br.com.fiap.domain.dto.responses;
 
 public class IndicadorResponse {
 
-	private String ano;
-	private String consumo;
+	private Integer ano;
+	private Double consumo;
 
-	public IndicadorResponse(String ano, String consumo) {
+	public IndicadorResponse(Integer ano, Double consumo) {
 		super();
 		this.ano = ano;
 		this.consumo = consumo;
@@ -15,19 +15,19 @@ public class IndicadorResponse {
 		super();
 	}
 
-	public String getAno() {
+	public Integer getAno() {
 		return ano;
 	}
 
-	public void setAno(String ano) {
+	public void setAno(Integer ano) {
 		this.ano = ano;
 	}
 
-	public String getConsumo() {
+	public Double getConsumo() {
 		return consumo;
 	}
 
-	public void setConsumo(String consumo) {
+	public void setConsumo(Double consumo) {
 		this.consumo = consumo;
 	}
 

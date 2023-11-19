@@ -22,9 +22,9 @@ public class OdsEntity {
 	@Id
 	@Column(name = "odsKey")
 	private String odsKey;
-	@Column(name = "objetivosGlobais")
+	@Column(name = "objetivoGlobal")
 	private String objetivosGlobais;
-	@Column(name = "objetivosBrasil")
+	@Column(name = "objetivoBrasil")
 	private String objetivosBrasil;
 
 }

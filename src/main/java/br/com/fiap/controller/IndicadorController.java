@@ -6,13 +6,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fiap.domain.dto.responses.IndicadorResponse;
-import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
-import br.com.fiap.domain.entity.ConsumoEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -32,8 +32,8 @@ public interface IndicadorController {
 			@ApiResponse(responseCode = "401", description = "Invalid Authentication supplied", content = @Content),
 			@ApiResponse(responseCode = "403", description = "Invalid Authorization supplied", content = @Content),
 			@ApiResponse(responseCode = "404", description = "Login or Password not found", content = @Content) })
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/")
 	@ResponseStatus(HttpStatus.OK)
-	public List<IndicadorResponse> getConsumo();
+	public List<IndicadorResponse> getConsumo(@PathVariable String indicadorKey);
 
 }

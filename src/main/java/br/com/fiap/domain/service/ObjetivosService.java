@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
 import br.com.fiap.domain.entity.ConsumoEntity;
 import br.com.fiap.domain.repository.ConsumoRepository;
-import br.com.fiap.domain.usecase.ConsumoUseCase;
+import br.com.fiap.domain.usecase.ObjetivosUseCase;
 
 @Service
-public class ObjetivosService implements ConsumoUseCase {
+public class ObjetivosService implements ObjetivosUseCase {
 	
 	@Autowired
 	ConsumoRepository consumoRepository;
