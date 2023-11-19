@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.domain.entity.ConsumoEntity;
+import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
+import br.com.fiap.domain.entity.OdsEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,8 +20,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/consumo")
-public interface ConsumoController {
+@RequestMapping("/objetivos")
+public interface ObjetivosController {
 
 	@Operation(summary = "ODS API - Microsserviço.", description = "Retorno dos dados da tabela consumo", tags = {
 			"ODS API" })
@@ -30,8 +31,8 @@ public interface ConsumoController {
 			@ApiResponse(responseCode = "401", description = "Invalid Authentication supplied", content = @Content),
 			@ApiResponse(responseCode = "403", description = "Invalid Authorization supplied", content = @Content),
 			@ApiResponse(responseCode = "404", description = "Login or Password not found", content = @Content) })
-	@GetMapping(value = "/", consumes = "multipart/form-data")
+	@GetMapping(value = "/")
 	@ResponseStatus(HttpStatus.OK)
-	public List<ConsumoEntity> getConsumo();
+	public ResponseEntity<ObjetivosGeraisResponse> getOds();
 
 }

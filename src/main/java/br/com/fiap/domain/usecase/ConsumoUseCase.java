@@ -1,11 +1,11 @@
 package br.com.fiap.domain.usecase;
 
-import java.util.List;
+import org.springframework.http.ResponseEntity;
 
-import br.com.fiap.domain.entity.ConsumoEntity;
+import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
 
 public interface ConsumoUseCase {
 
-	public List<ConsumoEntity> getConsumo();
+	public ResponseEntity<ObjetivosGeraisResponse> getConsumo();
 
 }

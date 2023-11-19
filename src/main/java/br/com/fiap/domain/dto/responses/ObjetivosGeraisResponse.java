@@ -1,18 +1,21 @@
-package br.com.fiap.domain.dto;
+package br.com.fiap.domain.dto.responses;
 
 import java.util.List;
 
-public class ObjetivosGerais {
+import br.com.fiap.domain.dto.IndicadorDTO;
+import br.com.fiap.domain.dto.ObjetivosDTO;
+
+public class ObjetivosGeraisResponse {
 
 	private String id;
 	private ObjetivosDTO objetivos;
 	private List<IndicadorDTO> indicadores;
 
-	public ObjetivosGerais() {
+	public ObjetivosGeraisResponse() {
 		super();
 	}
 
-	public ObjetivosGerais(String id, ObjetivosDTO objetivos, List<IndicadorDTO> indicadores) {
+	public ObjetivosGeraisResponse(String id, ObjetivosDTO objetivos, List<IndicadorDTO> indicadores) {
 		super();
 		this.id = id;
 		this.objetivos = objetivos;
