@@ -8,7 +8,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
 @Repository
-public class IndicadorDAO {
+public class IndicadorQuery {
     
     @PersistenceContext
     private EntityManager entityManager;

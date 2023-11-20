@@ -11,5 +11,7 @@ import br.com.fiap.domain.entity.IndicadorEntity;
 public interface IndicadorRepository extends JpaRepository<IndicadorEntity, String> {
 	
 	List<IndicadorEntity> findByIndicadorKey(String indicadorKey);
+	
+	List<IndicadorEntity> findByOdsKey(String key);
 
 }

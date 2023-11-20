@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.fiap.domain.dao.IndicadorDAO;
+import br.com.fiap.domain.dao.IndicadorQuery;
 import br.com.fiap.domain.dto.responses.IndicadorResponse;
 import br.com.fiap.domain.usecase.IndicadorUseCase;
 
@@ -14,7 +14,7 @@ import br.com.fiap.domain.usecase.IndicadorUseCase;
 public class IndicadorService implements IndicadorUseCase {
 	
 	@Autowired
-	private IndicadorDAO indicadorDAO;
+	private IndicadorQuery indicadorDAO;
 
 	@Override
 	public List<IndicadorResponse> getIndicador(String indicadorKey) {

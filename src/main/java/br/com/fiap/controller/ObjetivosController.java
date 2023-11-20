@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fiap.domain.dto.responses.ObjetivosGeraisResponse;
-import br.com.fiap.domain.entity.OdsEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -31,8 +30,8 @@ public interface ObjetivosController {
 			@ApiResponse(responseCode = "401", description = "Invalid Authentication supplied", content = @Content),
 			@ApiResponse(responseCode = "403", description = "Invalid Authorization supplied", content = @Content),
 			@ApiResponse(responseCode = "404", description = "Login or Password not found", content = @Content) })
-	@GetMapping(value = "/")
+	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<ObjetivosGeraisResponse> getOds();
+	public List<ObjetivosGeraisResponse> getOds();
 
 }

@@ -11,5 +11,4 @@ public interface ConsumoRepository extends JpaRepository<ConsumoEntity, String> 
 	
 	
 	
-
 }
