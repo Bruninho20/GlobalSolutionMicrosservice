@@ -1,6 +1,7 @@
 package br.com.fiap.domain.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,11 +14,17 @@ import br.com.fiap.domain.usecase.IndicadorUseCase;
 public class IndicadorService implements IndicadorUseCase {
 	
 	@Autowired
-	IndicadorDAO indicadorDAO;
+	private IndicadorDAO indicadorDAO;
 
 	@Override
 	public List<IndicadorResponse> getIndicador(String indicadorKey) {
-		return indicadorDAO.obterIndicadores(indicadorKey);
+		List<Object[]> results = indicadorDAO.obterIndicadores(indicadorKey);
+		
+		List<IndicadorResponse> indicadores = results.stream()
+				.map(IndicadorResponse::from)
+				.collect(Collectors.toList());
+
+		return indicadores;
 	}
 
 }
