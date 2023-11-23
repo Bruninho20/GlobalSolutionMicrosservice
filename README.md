@@ -9,3 +9,13 @@ Bem vindo(a), esta é a entrega da matéria de Microsservice and Web Engineering
 
 ## Back-End
 Nosso back-end, foi desenvolvido utilizando a tecnologia SpringBoot
+
+
+
+## Instruções para criar a imagem
+
+$ docker build . -t api
+
+$ docker run -p 8080:8080 api
+
+
