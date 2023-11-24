@@ -21,26 +21,16 @@ Retorno da aplicação do endpoint /indicador/{indicadorKey}
 
 <img width="860" alt="image" src="https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/8f830c38-e4aa-4a88-b2c5-3dbe01dd5b4d">
 
+Para iniciar, adicione este Dockerfile na raiz do projeto:
+<img width="701" alt="image" src="https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/d61a38aa-f5a8-463d-8b7c-76ae32cbb1a3">
+
 
 ## Instruções para criar a imagem no Docker
+Rode esses comandos no terminal PowerShell, note-se que o nome da imagem é "api"...
 
 $ docker build . -t api
 
 $ docker run -p 8080:8080 api
-
-Para iniciar, adicione este Dockerfile ao projeto:
-FROM maven:3.8.1-openjdk-17-slim AS MAVEN_TOOL_CHAIN
-
-WORKDIR /tmp/
-COPY . .
-
-RUN mvn clean install
-
-FROM openjdk:17-jdk-slim
-COPY --from=MAVEN_TOOL_CHAIN /tmp/target/br.com.fiap-0.0.1-SNAPSHOT.jar $CATALINA_HOME/webapps/br.com.fiap-0.0.1-SNAPSHOT.jar
-WORKDIR $CATALINA_HOME/webapps/
-ENTRYPOINT [ "java","-jar", "br.com.fiap-0.0.1-SNAPSHOT.jar"  ]
-EXPOSE 80
 ---------------------------------------------------------------------------
 
 Ao criar, a imagem aparecerá da seguinte forma do Dockerfile:
