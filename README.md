@@ -22,6 +22,12 @@ Retorno da aplicação do endpoint /indicador/{indicadorKey}
 <img width="860" alt="image" src="https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/8f830c38-e4aa-4a88-b2c5-3dbe01dd5b4d">
 
 
+## Instruções para criar a imagem no Docker
+
+$ docker build . -t api
+
+$ docker run -p 8080:8080 api
+
 
 
 
