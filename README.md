@@ -28,6 +28,14 @@ $ docker build . -t api
 
 $ docker run -p 8080:8080 api
 
+Ao criar, a imagem aparecerá da seguinte forma do Dockerfile:
+<img width="743" alt="image" src="https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/7d6ffbfa-96c2-478f-9b48-20fe4f65141a">
+
+inicie o container da aplicação clicando no play.
+Ao iniciar a aplicação ficará disponível, no caso na porta 8080 neste [link](http://localhost:8080/swagger-ui/index.html#/)  .
+
+Pronto o back-end da aplicação ja está rodando com o Docker.
+
 
 
 
