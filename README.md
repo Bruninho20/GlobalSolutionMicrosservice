@@ -28,6 +28,21 @@ $ docker build . -t api
 
 $ docker run -p 8080:8080 api
 
+Para iniciar, adicione este Dockerfile ao projeto:
+FROM maven:3.8.1-openjdk-17-slim AS MAVEN_TOOL_CHAIN
+
+WORKDIR /tmp/
+COPY . .
+
+RUN mvn clean install
+
+FROM openjdk:17-jdk-slim
+COPY --from=MAVEN_TOOL_CHAIN /tmp/target/br.com.fiap-0.0.1-SNAPSHOT.jar $CATALINA_HOME/webapps/br.com.fiap-0.0.1-SNAPSHOT.jar
+WORKDIR $CATALINA_HOME/webapps/
+ENTRYPOINT [ "java","-jar", "br.com.fiap-0.0.1-SNAPSHOT.jar"  ]
+EXPOSE 80
+---------------------------------------------------------------------------
+
 Ao criar, a imagem aparecerá da seguinte forma do Dockerfile:
 <img width="743" alt="image" src="https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/7d6ffbfa-96c2-478f-9b48-20fe4f65141a">
 
