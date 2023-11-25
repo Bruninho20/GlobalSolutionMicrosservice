@@ -10,6 +10,7 @@ Bem vindo(a), esta é a entrega da matéria de Microsservice and Web Engineering
 ## Back-End
 Nosso back-end, foi desenvolvido utilizando a tecnologia SpringBoot.
 Para o banco de dados, utilizamos OracleDataBase, na seguinte modelagem:
+
 Esse é modelo lógico:
 ![image](https://github.com/Bruninho20/GlobalSolutionMicrosservice/assets/99261881/0f8dd010-8318-4dcf-809f-7970bd5d5a52)
 
